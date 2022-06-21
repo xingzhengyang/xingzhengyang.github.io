@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="BashBash CommandscurlTransfer to&#x2F;from URL  Curl ${URL} -O &#x2F;&#x2F;to download it  dateShow the date echoPrint the following string(notice a format string in c) echo is a type of write ,which">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bash Notes">
+<meta property="og:url" content="http://example.com/2021/05/25/Bash-1/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="BashBash CommandscurlTransfer to&#x2F;from URL  Curl ${URL} -O &#x2F;&#x2F;to download it  dateShow the date echoPrint the following string(notice a format string in c) echo is a type of write ,which">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-05-25T06:42:36.174Z">
+<meta property="article:modified_time" content="2022-06-21T06:08:32.135Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/05/25/Bash-1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Bash Notes | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/25/Bash-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Bash Notes
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-05-25 14:42:36" itemprop="dateCreated datePublished" datetime="2021-05-25T14:42:36+08:00">2021-05-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-06-21 14:08:32" itemprop="dateModified" datetime="2022-06-21T14:08:32+08:00">2022-06-21</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Bash"><a href="#Bash" class="headerlink" title="Bash"></a>Bash</h1><h2 id="Bash-Commands"><a href="#Bash-Commands" class="headerlink" title="Bash Commands"></a>Bash Commands</h2><h4 id="curl"><a href="#curl" class="headerlink" title="curl"></a>curl</h4><p>Transfer to&#x2F;from URL</p>
+<blockquote>
+<p>Curl ${URL} -O &#x2F;&#x2F;to download it</p>
+</blockquote>
+<h4 id="date"><a href="#date" class="headerlink" title="date"></a>date</h4><p>Show the date</p>
+<h4 id="echo"><a href="#echo" class="headerlink" title="echo"></a>echo</h4><p>Print the following string(notice a format string in c)</p>
+<p><code>echo</code> is a type of write ,which will take place of the previous content of a file with new content.</p>
+<h4 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h4><p>Print working directory</p>
+<h4 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h4><p>change directory</p>
+<p><strong>.. means the last directory</strong></p>
+<p>-(dash) means the previous working directory (back)</p>
+<p>Use cd ..&#x2F;..&#x2F; to back to the third last directory</p>
+<h4 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h4><p>List </p>
+<h4 id="help"><a href="#help" class="headerlink" title="help"></a>help</h4><p>Command -help</p>
+<h4 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h4><p>Use mv to rename or move a file</p>
+<h4 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h4><p>copy file</p>
+<p><code>copy source target</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copy <span class="built_in">source</span> target</span><br></pre></td></tr></table></figure>
+
+<h4 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -R directory</span><br></pre></td></tr></table></figure>
+
+<p>Use -R to fully delete the directory (password needed)</p>
+<h4 id="rmdir"><a href="#rmdir" class="headerlink" title="rmdir"></a>rmdir</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rmdir</span> directory</span><br></pre></td></tr></table></figure>
+
+<p>Remove an empty directory</p>
+<h4 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h4><p>Make a directory, followed by one string</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> hello\ world</span><br><span class="line"><span class="built_in">mkdir</span> <span class="string">&quot;hello world&quot;</span></span><br><span class="line"><span class="built_in">echo</span> instead\ of\ hello world</span><br></pre></td></tr></table></figure>
+
+<h4 id="man"><a href="#man" class="headerlink" title="man"></a>man</h4><p>Manual to a command</p>
+<p><strong>q to quit</strong></p>
+<h4 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h4><p><code>cat</code> to view the file</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> &lt; hello.txt &gt; bash.txt</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="tail"><a href="#tail" class="headerlink" title="tail"></a>tail</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">tail</span> -n1</span><br></pre></td></tr></table></figure>
+
+<p>Use this to view the last one line of the list</p>
+<h4 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -i content-length curl-content</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="sudo"><a href="#sudo" class="headerlink" title="sudo"></a>sudo</h4><p>do as a super user</p>
+<p>Password acquired</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br></pre></td></tr></table></figure>
+
+<p>use this command to have a <code>root</code> permission</p>
+<h4 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a>chmod</h4><p><code>chmod</code> can change file mode. </p>
+<p>Mode number can be added.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 0777 file</span><br></pre></td></tr></table></figure>
+
+<p>The command above gives the rwx permission to three groups of users.</p>
+<h4 id="grep-1"><a href="#grep-1" class="headerlink" title="grep"></a>grep</h4><p><code>grep</code> can find certain content in the file.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep last-modified file</span><br></pre></td></tr></table></figure>
+
+<p>get the line.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -R content .</span><br></pre></td></tr></table></figure>
+
+<p>search the content in the directory <code>.</code></p>
+<h4 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h4><p><code>diff</code> can show the difference between two strings.</p>
+<h4 id="find"><a href="#find" class="headerlink" title="find"></a>find</h4><p>use <code>find</code> to make batch operation possible. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find foo?.py -<span class="built_in">exec</span> <span class="built_in">rm</span> &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="Bash-stream"><a href="#Bash-stream" class="headerlink" title="Bash stream"></a>Bash stream</h2><p>Rewire the I&#x2F;O stream</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; file //to the file</span><br><span class="line">&lt; file //from file</span><br></pre></td></tr></table></figure>
+
+<p><code>&lt;</code> stands for output from the file</p>
+<p><code>&gt;</code> stands for input to the file</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> hello &gt; bash.txt</span><br></pre></td></tr></table></figure>
+
+<p><code>&gt;&gt;</code> stands for append</p>
+<p><code>a | b</code> is pipe, which is like a real pipe which will transcend content between a and b. </p>
+<p>Here is an example of pipe:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -l / | <span class="built_in">tail</span> -n1 &gt; ls.txt </span><br></pre></td></tr></table></figure>
+
+<p>Firstly, <code>ls -l / </code>gives an output to <code>tail</code> as an input, then <code>tail</code> use it to show the last line ,then the last line is written into the <code>ls.txt</code> file.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> 1050 | sudo <span class="built_in">tee</span> brightness</span><br></pre></td></tr></table></figure>
+
+<h1 id="File-mode"><a href="#File-mode" class="headerlink" title="File mode"></a>File mode</h1><p><code>ls -l</code> can give you the long format of the file information which includes the <code>file mode</code>.</p>
+<p>File mode in linux (or unix-like system like macos) is like below:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-rwxr--r--</span><br></pre></td></tr></table></figure>
+
+<p>The file mode can be interepted into 4 groups:</p>
+<p>the first one letter,<code>d</code> or ‘-‘ ,shows that whether it is a directory or not.</p>
+<p>The following three groups are respectively permissions hold by owner, users and other.</p>
+<p><code>r</code> for read, <code>w</code> for write, and <code>x</code> for execute.</p>
+<p>use <code>chmod</code> to change file mode.</p>
+<h1 id="Bash-Script"><a href="#Bash-Script" class="headerlink" title="Bash Script"></a>Bash Script</h1><h3 id="Notations"><a href="#Notations" class="headerlink" title="Notations"></a>Notations</h3><p><code>$</code> for variable. For example, </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">foo=bar	<span class="comment">#there should be without any space</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$foo</span></span><br><span class="line"><span class="comment"># bar</span></span><br></pre></td></tr></table></figure>
+
+<p><code>&quot;&quot;</code> For string but with format.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;this is foo : <span class="variable">$foo</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>However, <code>&#39;&#39;</code>is quite different in this point.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;this is foo : $foo&#x27;</span></span><br><span class="line"><span class="comment">#this will give a simple string</span></span><br></pre></td></tr></table></figure>
+
+<p><code>.sh</code> is a type of shell script used by bash.</p>
+<p>use <code>source</code> command to make it a source shell command instead of being a text file</p>
+<p>some variable names are reserved for functions.</p>
+<p><code>$0</code> is the name of the command, <code>$?</code> is the last command’s error bool, <code>$_</code> is the last variable of the function.</p>
+<p><code>$#</code> is number of arguments(argc), <code>$$</code> is the pid of the process, <code>$@</code> will expand to all the arguments.</p>
+<p><code>||</code> is quite different from which we have learned in c. It is a choose sentence.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep what file || <span class="built_in">echo</span> <span class="string">&#x27;can not find the line&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>||</code> means if the previous one is false, then do the latter one.</p>
+<p><code>&amp;&amp;</code> is opposite to <code>||</code></p>
+<p><code>;</code> will separate two sentences</p>
+<p>Use <code>()</code> to make format string in bash, which is like <code>&#123;&#125;</code> in python.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;this is pwd: <span class="subst">$(pwd)</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;date: <span class="subst">$(date)</span>&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;running program <span class="variable">$0</span> with <span class="variable">$#</span> argvs with pid $$&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> <span class="string">&quot;<span class="variable">$@</span>&quot;</span>; <span class="keyword">do</span></span><br><span class="line">	grep foobar <span class="string">&quot;<span class="variable">$file</span>&quot;</span> &gt; /dev/null 2&gt; /dev/null</span><br><span class="line">	<span class="keyword">if</span> [[ <span class="string">&quot;$?&quot;</span> -ne 0 ]]; <span class="keyword">then</span></span><br><span class="line">		<span class="built_in">echo</span> <span class="string">&quot;File <span class="variable">$file</span> does not have any foobar&quot;</span></span><br><span class="line">		<span class="built_in">echo</span> <span class="string">&quot;# foobar&quot;</span> &gt;&gt; <span class="string">&quot;<span class="variable">$file</span>&quot;</span></span><br><span class="line">	<span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<p>this is an example of a loop and condition in bash script.</p>
+<p><code>-ne</code> is short for <code>not equal</code> , and <code>if</code> <code>;</code> <code>then</code> <code>fi</code> gives a conditional sentence part.</p>
+<p><code>*</code> for any , <code>?</code> For not finished line(only stands for one character)</p>
+<p><code>#!</code> notation is a special command to let the file be runned in certain way, like in python.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/python</span></span><br></pre></td></tr></table></figure>
+
+<p><code>\</code> is similar to C, which can be <code>\;</code> or something else to be a special character.</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/08/09/React/" rel="next" title="React纸上谈兵">
+      React纸上谈兵 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Bash"><span class="nav-number">1.</span> <span class="nav-text">Bash</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Bash-Commands"><span class="nav-number">1.1.</span> <span class="nav-text">Bash Commands</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#curl"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">curl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#date"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">date</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#echo"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">echo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pwd"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">pwd</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cd"><span class="nav-number">1.1.0.5.</span> <span class="nav-text">cd</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ls"><span class="nav-number">1.1.0.6.</span> <span class="nav-text">ls</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#help"><span class="nav-number">1.1.0.7.</span> <span class="nav-text">help</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mv"><span class="nav-number">1.1.0.8.</span> <span class="nav-text">mv</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cp"><span class="nav-number">1.1.0.9.</span> <span class="nav-text">cp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rm"><span class="nav-number">1.1.0.10.</span> <span class="nav-text">rm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rmdir"><span class="nav-number">1.1.0.11.</span> <span class="nav-text">rmdir</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mkdir"><span class="nav-number">1.1.0.12.</span> <span class="nav-text">mkdir</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#man"><span class="nav-number">1.1.0.13.</span> <span class="nav-text">man</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cat"><span class="nav-number">1.1.0.14.</span> <span class="nav-text">cat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tail"><span class="nav-number">1.1.0.15.</span> <span class="nav-text">tail</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grep"><span class="nav-number">1.1.0.16.</span> <span class="nav-text">grep</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sudo"><span class="nav-number">1.1.0.17.</span> <span class="nav-text">sudo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chmod"><span class="nav-number">1.1.0.18.</span> <span class="nav-text">chmod</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grep-1"><span class="nav-number">1.1.0.19.</span> <span class="nav-text">grep</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#diff"><span class="nav-number">1.1.0.20.</span> <span class="nav-text">diff</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#find"><span class="nav-number">1.1.0.21.</span> <span class="nav-text">find</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bash-stream"><span class="nav-number">1.2.</span> <span class="nav-text">Bash stream</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#File-mode"><span class="nav-number">2.</span> <span class="nav-text">File mode</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bash-Script"><span class="nav-number">3.</span> <span class="nav-text">Bash Script</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Notations"><span class="nav-number">3.0.1.</span> <span class="nav-text">Notations</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
