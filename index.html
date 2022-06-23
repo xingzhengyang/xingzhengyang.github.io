@@ -147,6 +147,95 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
+    <link itemprop="mainEntityOfPage" href="https://xingzhengyang.github.io/2022/06/23/%E4%BD%BF%E7%94%A8Reader%20View%E4%BC%98%E5%8C%96%E4%BD%A0%E7%9A%84%E9%98%85%E8%AF%BB%E4%BD%93%E9%AA%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="邢正扬">
+      <meta itemprop="description" content="邢正扬的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="邢正扬的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/06/23/%E4%BD%BF%E7%94%A8Reader%20View%E4%BC%98%E5%8C%96%E4%BD%A0%E7%9A%84%E9%98%85%E8%AF%BB%E4%BD%93%E9%AA%8C/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-06-23 14:26:37 / Modified: 17:08:13" itemprop="dateCreated datePublished" datetime="2022-06-23T14:26:37+08:00">2022-06-23</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="使用Reader-View优化你的阅读体验"><a href="#使用Reader-View优化你的阅读体验" class="headerlink" title="使用Reader View优化你的阅读体验"></a>使用Reader View优化你的阅读体验</h1><p><a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/reader-view/ecabifbgmdmgdllomnfinbmaellmclnh?hl=en">Reader View</a> 是<code>chrome</code>浏览器（和使用chrome内核的浏览器）的一款扩展。相比于其他<code>阅读模式</code>扩展，<code>Reader View</code>的独特之处在于，它提供了一个高度可自定义的设置选项，包括用正则表达式匹配网页地址实现自动切换，自定义css和一些快捷键设置。</p>
+<p>在这篇文章里，将给出一个简单的<code>Reader View</code>设置示例，并逐步讲解设置的一些核心内容。</p>
+<h2 id="第一步：开启Simple-mode"><a href="#第一步：开启Simple-mode" class="headerlink" title="第一步：开启Simple mode"></a>第一步：开启Simple mode</h2><p>如果采用默认设置使用<code>Reader View</code>，会发现进入了一个有侧边栏的新网页。</p>
+<p>这个网页往往不能满足我们的需求。</p>
+<p>首先，这个网页不能套用原网页的键位绑定。在很多小说网站，我们可以使用右箭头进入下一个页面。这个新网页不能满足翻页的要求。</p>
+<p>第二，这个网页的相关设置项相对死板，占用侧边的空间也显得不是那么美观。</p>
+<p><code>Reader View</code>提供了<code>Simple mode</code>,也就是通过<em>修改页面的内容</em>来实现<code>阅读模式</code>功能的模式。</p>
+<p><code>Misc</code>选项卡的<code>Simple mode</code>选项，勾选就可以进入<code>Simple mode</code></p>
+<h2 id="第二步：自动跳转到阅读模式"><a href="#第二步：自动跳转到阅读模式" class="headerlink" title="第二步：自动跳转到阅读模式"></a>第二步：自动跳转到阅读模式</h2><p><code>Reader View</code>提供了<code>Automatic Switch</code>，可以用正则表达式决定哪些网站可以自动跳转。</p>
+<p>一个简单的例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">r</span>:\w+\.<span class="property">csdn</span>\.<span class="property">com</span>/\w+/\w+\.<span class="property">html</span></span><br></pre></td></tr></table></figure>
+
+<p><code>\w+</code>:任意多个字母</p>
+<p><code>\.</code>:点字符</p>
+<p><code>r:</code>:正则表达式的提示符</p>
+<p><code>,</code>:分割两个表达式</p>
+<p>可以依照该格式编写自己的表达式。</p>
+<h2 id="第三步：写CSS"><a href="#第三步：写CSS" class="headerlink" title="第三步：写CSS"></a>第三步：写CSS</h2><p>不要害怕，这不是一篇教你怎么写CSS的长篇巨著。</p>
+<p>事实上，我们不需要多少CSS知识，只需要简单认识几个名词：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">64px</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&quot;Source Han Serif, Noto Serif Simplified Chinese&quot;</span>,serif <span class="meta">!important</span>;</span><br><span class="line">  	<span class="attribute">background-color</span>: <span class="number">#000000</span>;</span><br><span class="line">  	<span class="attribute">color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* ... */</span></span><br></pre></td></tr></table></figure>
+
+<p>我们只需要关注示例CSS的这一部分。</p>
+<p><code>body</code>:内容</p>
+<p><code>padding</code>:决定着上下左右的空白面积</p>
+<p><code>font-family</code>:字体</p>
+<p><code>!important</code>：非常重要，可以覆盖之前的设置</p>
+<p><code>background-color</code>:背景颜色</p>
+<p><code>color</code>:字体颜色</p>
+<p>根据这些内容，我们就能快速自定义主题了。</p>
+<h2 id="第四步：别忘了保存"><a href="#第四步：别忘了保存" class="headerlink" title="第四步：别忘了保存"></a>第四步：别忘了保存</h2><p>最后一个按钮<code>Save Options</code>可以保存设置。</p>
+<p>🎉恭喜你，已经完成了<code>Reader View</code>的简单自定义了🎉</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
     <link itemprop="mainEntityOfPage" href="https://xingzhengyang.github.io/2022/06/21/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -555,7 +644,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
